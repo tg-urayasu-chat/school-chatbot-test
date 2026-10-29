@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src 'none'; img-src data:; form-action 'none'; base-uri 'none'; object-src 'none'">
+<title>入試案内チャット | 体験デモ</title>
+<style>
+:root{color-scheme:light;--ink:#173b3b;--muted:#566b6b;--teal:#15675e;--line:#dce5df;--paper:#f4f6f0}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:"Yu Gothic","Hiragino Kaku Gothic ProN",sans-serif;line-height:1.8}button,input{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #be7a20;outline-offset:3px}.top{border-bottom:1px solid var(--line);background:#fff}.top-inner{max-width:1120px;margin:auto;padding:20px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{font-weight:700;letter-spacing:.08em}.mark{display:inline-grid;place-items:center;width:34px;height:34px;background:var(--teal);color:white;border-radius:10px;margin-right:10px}.badge{font-size:12px;border:1px solid #c6d6c8;border-radius:20px;padding:3px 12px;white-space:nowrap}main{max-width:1120px;margin:48px auto;padding:0 28px;display:grid;grid-template-columns:340px minmax(0,1fr);gap:48px}.eyebrow{font-size:12px;letter-spacing:.18em;color:var(--teal);font-weight:700}h1{font-size:34px;line-height:1.55;letter-spacing:.03em;margin:14px 0 18px}.intro{color:var(--muted);font-size:15px}.note{border-left:3px solid #bba66b;padding:2px 0 2px 16px;margin:28px 0;font-size:13px;color:var(--muted)}.topics-title{font-size:13px;font-weight:700;margin:28px 0 10px}.topics{display:grid;grid-template-columns:1fr 1fr;gap:10px}.topic{border:1px solid #cedbd2;border-radius:10px;background:#fff;color:var(--ink);padding:12px 8px;text-align:left;font-size:13px}.topic:hover{background:#e5eee7;border-color:var(--teal)}.topic span{float:right;color:var(--teal)}.chat{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 14px 50px #193b3b09;align-self:start}.chat-head{padding:20px 24px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:12px}.chat-title{font-weight:700}.status{font-size:12px;color:var(--muted)}.dot{color:var(--teal);margin-right:5px}.reset{border:0;background:transparent;color:var(--muted);font-size:12px;text-decoration:underline;padding:8px}.log{height:390px;overflow-y:auto;padding:24px;scroll-behavior:smooth}.message{margin-bottom:20px;max-width:92%}.who{font-size:11px;font-weight:700;color:var(--muted);margin-bottom:5px}.bubble{background:#eef4ef;border-radius:2px 14px 14px;padding:14px 17px;font-size:14px;white-space:pre-wrap;overflow-wrap:anywhere}.user{margin-left:auto}.user .who{text-align:right}.user .bubble{background:var(--teal);color:#fff;border-radius:14px 2px 14px 14px}.compose{padding:18px 24px 20px;border-top:1px solid var(--line)}label{display:block;font-size:12px;font-weight:700;margin-bottom:8px}.input-row{display:flex;gap:8px}input{min-width:0;flex:1;width:100%;border:1px solid #c7d5cc;border-radius:9px;padding:12px;font-size:14px;background:#fff;color:var(--ink)}.send{border:0;border-radius:9px;background:var(--teal);color:#fff;padding:10px 20px;white-space:nowrap}.helper{font-size:11px;color:var(--muted);margin:9px 0 0}.error{font-size:12px;color:#a33b21;margin:5px 0}details{font-size:12px;color:var(--muted);margin-top:22px}summary{cursor:pointer}footer{max-width:1120px;margin:0 auto;padding:0 28px 28px;font-size:11px;letter-spacing:.04em;color:var(--muted)}noscript p{padding:20px;background:#fff2d8}@media(max-width:800px){main{grid-template-columns:1fr;gap:26px;margin-top:28px}.intro{max-width:550px}h1{font-size:29px}.note{margin:20px 0}.topics-title{margin-top:20px}.topics{grid-template-columns:repeat(3,1fr)}.log{height:340px}}@media(max-width:440px){main{padding:0 16px}.top-inner{padding:16px}.brand{font-size:13px}.badge{font-size:10px;padding:3px 8px}.topics{grid-template-columns:1fr 1fr}.chat-head,.compose{padding:16px}.log{padding:16px}.send{padding:10px 14px}}@media(prefers-reduced-motion:reduce){.log{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="top"><div class="top-inner"><div class="brand"><span class="mark" aria-hidden="true">学</span>入試案内チャット</div><span class="badge">体験デモ・非公式</span></div></header>
+<main>
+<section aria-labelledby="page-title">
+<div class="eyebrow">ADMISSIONS GUIDE</div>
+<h1 id="page-title">気になることから、<br>進学への一歩を。</h1>
+<p class="intro">出願の準備から学校見学まで。<br>入試について知りたいことを、<br>チャットで気軽に確認する体験です。</p>
+<div class="note"><strong>この画面は試作品です。</strong><br>実際の学校の募集要項には接続していません。日程・金額・条件は、学校の公式案内でご確認ください。</div>
+<p class="topics-title">まずは、気になるテーマを選択</p>
+<div class="topics" id="topics">
+<button class="topic" type="button" data-question="出願の流れを教えて">出願の流れ <span aria-hidden="true">↗</span></button>
+<button class="topic" type="button" data-question="入試日程を知りたい">入試日程 <span aria-hidden="true">↗</span></button>
+<button class="topic" type="button" data-question="試験科目を教えて">試験科目 <span aria-hidden="true">↗</span></button>
+<button class="topic" type="button" data-question="学費について知りたい">学費・費用 <span aria-hidden="true">↗</span></button>
+<button class="topic" type="button" data-question="学校説明会に参加したい">説明会・見学 <span aria-hidden="true">↗</span></button>
+<button class="topic" type="button" data-question="学校に問い合わせたい">お問い合わせ <span aria-hidden="true">↗</span></button>
+</div>
+<details><summary>このデモの仕組み・入力について</summary><p>用意したFAQをキーワードで選ぶ仕組みです。生成AIは使用しません。入力内容の外部送信・ブラウザーへの永続保存は行いません。会話は再読み込みまたは「会話を消去」で消えます。氏名・連絡先・受験番号などは入力しないでください。</p></details>
+</section>
+<section class="chat" aria-label="入試案内のチャット">
+<div class="chat-head"><div><div class="chat-title">入試案内サポート</div><div class="status"><span class="dot" aria-hidden="true">●</span>FAQでお答えするデモ</div></div><button type="button" class="reset" id="reset">会話を消去</button></div>
+<div class="log" id="log" role="log" aria-live="polite" aria-relevant="additions" aria-label="会話履歴" tabindex="0"></div>
+<form class="compose" id="form">
+<label for="question">質問を入力</label>
+<div class="input-row"><input id="question" name="question" type="text" maxlength="300" placeholder="例：出願に必要なものは？" autocomplete="off" aria-describedby="hint error"><button class="send" type="submit">送信</button></div>
+<p id="error" class="error" role="status"></p><p id="hint" class="helper">300文字以内。氏名・電話番号などの個人情報は入力しないでください。</p>
+</form>
+</section>
+</main>
+<noscript><p>チャット体験にはJavaScriptを有効にしてください。このページは非公式のデモで、実際の入試情報は掲載していません。</p></noscript>
+<footer>学校入試案内チャットボット ／ GitHub Pages用試作品</footer>
+<script>
+'use strict';
+// 学校の承認済み情報を入れる場合は、年度・出典・更新日も明示してください。
+const FAQ = [
+ {keys:['出願','願書','申込','申し込','必要','書類'],answer:'【デモ：出願の流れ】\n確認の順序の例は、①対象年度の募集要項を読む → ②出願資格と必要書類を確認 → ③指定の方法で出願 → ④受験票を確認、です。\n\nこのデモでは出願の受付や書類の提出はできません。必要書類・締切・手続きは、学校の正式な募集要項で確認してください。'},
+ {keys:['日程','日付','いつ','締切','締め切り','期間','発表'],answer:'【デモ：入試日程】\n出願期間・試験日・合格発表日・入学手続き期限を、それぞれ確認しましょう。\n\n具体的な日程は未登録です。対象年度と入試区分を確認し、学校の公式募集要項をご覧ください。'},
+ {keys:['科目','試験','面接','作文','過去問','入試'],answer:'【デモ：試験科目】\n試験科目・試験時間・面接の有無・当日の持ち物は、入試区分によって異なる場合があります。\n\nこのデモには学校固有の試験情報がありません。正式な募集要項をご確認ください。'},
+ {keys:['学費','費用','金額','授業料','入学金','奨学','支援','いくら'],answer:'【デモ：学費・費用】\n入学時に必要な費用、年間の授業料、そのほかの諸経費と納入時期を確認しましょう。支援制度は、対象条件や申請方法の確認も必要です。\n\n金額・制度の条件は未登録です。学校の公式案内をご確認ください。'},
+ {keys:['説明会','見学','オープン','体験','予約'],answer:'【デモ：説明会・学校見学】\n開催日、予約の要否、対象学年、会場、持ち物を確認しましょう。\n\nこのデモでは予約できません。学校の公式サイトで最新の開催情報と予約方法をご確認ください。'},
+ {keys:['問い合わせ','問合せ','電話','連絡','相談','アクセス','場所','住所'],answer:'【デモ：お問い合わせ】\n学校の公式サイトに掲載されている入試窓口をご利用ください。対象年度・入試区分・質問内容を整理しておくと確認しやすくなります。\n\nこの試作品には公式URL・電話番号・所在地は未登録です。'},
+ {keys:['こんにちは','はじめまして','ありがとう'],answer:'ご利用ありがとうございます。入試案内のチャット体験へようこそ。出願・日程・試験科目・学費・説明会・お問い合わせについて、確認のポイントをご案内します。'}
+];
+const welcome='こんにちは。入試案内の体験デモです。\nテーマを選ぶか、気になることを入力してください。\n\n学校固有の日程や金額は未登録です。回答は一般的な確認ポイントで、正式な入試案内ではありません。';
+function answerFor(text){
+ const q=text.normalize('NFKC').toLowerCase();
+ if(/@|\d[\d\s()+-]{8,}\d/.test(q)) return '個人情報が含まれている可能性があります。このデモでは個人情報を扱いません。「会話を消去」で履歴を消し、個人情報を含めずに質問してください。';
+ const matches=FAQ.filter(item=>item.keys.some(key=>q.includes(key)));
+ if(!matches.length)return 'このデモでは、その質問に対応するFAQが見つかりませんでした。\n出願・入試日程・試験科目・学費・説明会・お問い合わせのテーマをお試しください。個別の判断が必要な内容は、学校の公式窓口へご確認ください。';
+ return matches.map(item=>item.answer).join('\n\n──────────\n\n');
+}
+const log=document.getElementById('log');
+const input=document.getElementById('question');
+const error=document.getElementById('error');
+function addMessage(text,user=false){
+ const item=document.createElement('div');item.className='message'+(user?' user':'');
+ const who=document.createElement('div');who.className='who';who.textContent=user?'あなた':'入試案内サポート · デモ';
+ const bubble=document.createElement('div');bubble.className='bubble';bubble.textContent=text;
+ item.append(who,bubble);log.append(item);
+ while(log.children.length>60)log.firstElementChild.remove();
+ log.scrollTop=log.scrollHeight;
+}
+function send(text){
+ const q=text.trim();error.textContent='';
+ if(!q){error.textContent='質問を入力するか、テーマを選んでください。';input.focus();return;}
+ if(q.length>300){error.textContent='質問は300文字以内で入力してください。';return;}
+ addMessage(q,true);addMessage(answerFor(q));input.value='';
+}
+document.getElementById('form').addEventListener('submit',event=>{event.preventDefault();send(input.value);});
+input.addEventListener('keydown',event=>{if(event.key==='Enter'&&(event.isComposing||event.keyCode===229))event.preventDefault();});
+document.getElementById('topics').addEventListener('click',event=>{const button=event.target.closest('button[data-question]');if(button)send(button.dataset.question);});
+document.getElementById('reset').addEventListener('click',()=>{log.replaceChildren();input.value='';error.textContent='';addMessage(welcome);input.focus();});
+addMessage(welcome);
+</script>
+</body>
+</html>
